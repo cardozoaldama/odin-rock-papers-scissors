@@ -65,8 +65,10 @@ function playRound(pj, cpu)
     }
     else
     {
+        // If nothing was written correctly:
         result = 'You write ' + pj + ' incorrectly';
     }
+    // Return the final result:
     return result;
 }
 
@@ -75,16 +77,21 @@ function playRound(pj, cpu)
 // Where the logic begins:
 console.log('ROCK, PAPERS, SCISSORS!');
 
-// Main variables:
-// SET playerSelection to empty text.
-let playerSelection = '';
-// SET computerSelection to empty text.
-let computerSelection = '';
-// ASSIGN computerSelection called a function getComputerChoice().
-computerSelection = getComputerChoice();
-// ASK the user for "Rock, Paper, or Scissor?" and assign the value in playerSelection:
-playerSelection = prompt('Write one of these: Rock, Paper, or Scissor.');
-// Convert playerSelection in all uppercase:
-playerSelection = playerSelection.toUpperCase();
-// PRINT a Function called playRound() with playerSelection and computerSelection Returning "result":
-console.log('');
+// MAIN FUNCTION GAME:
+
+function game()
+{
+    // Main variables:
+    // SET playerSelection to empty text.
+    let playerSelection = '';
+    // SET computerSelection to empty text.
+    let computerSelection = '';
+    // ASSIGN computerSelection called a function getComputerChoice().
+    computerSelection = getComputerChoice();
+    // ASK the user for "Rock, Paper, or Scissor?" and assign the value in playerSelection:
+    playerSelection = prompt('Write one of these: Rock, Paper, or Scissor.');
+    // Convert playerSelection in all uppercase:
+    playerSelection = playerSelection.toUpperCase();
+    // PRINT a Function called playRound() with playerSelection and computerSelection Returning "result":
+    console.log(playRound(playerSelection, computerSelection));
+}
