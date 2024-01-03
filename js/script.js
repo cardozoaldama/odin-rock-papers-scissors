@@ -95,3 +95,10 @@ function game()
     // PRINT a Function called playRound() with playerSelection and computerSelection Returning "result":
     console.log(playRound(playerSelection, computerSelection));
 }
+
+// Gaming beats-of-five!
+game();
+game();
+game();
+game();
+game();
