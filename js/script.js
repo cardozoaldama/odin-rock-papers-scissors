@@ -37,6 +37,39 @@ function getComputerChoice()
     }
 }
 
+// CREATE a Function called playRound() with pj and cpu which Returns a result.
+// The parameters are the player's choice and computer's choice respectively.
+function playRound(pj, cpu)
+{
+    // SET result to 'empty text'.
+    let result = '';
+    if (pj == cpu)
+    {
+        // Assign a draw in result.
+         result = 'It is a draw!';
+    }
+    else if (pj == 'ROCK' && cpu == 'SCISSOR')
+    {
+        // Rock beats Scissors.
+        result = 'You win! ' + pj + ' beats ' + cpu;
+    }
+    else if (pj == 'PAPER' && cpu == 'ROCK')
+    {
+        // Paper beats Rock.
+        result = 'You win! ' + pj + ' beats ' + cpu;
+    }
+    else if (pj == 'SCISSOR' && cpu == 'PAPER')
+    {
+        // Scissors beats Paper.
+        result = 'You win! ' + pj + ' beats ' + cpu;
+    }
+    else
+    {
+        result = 'You write ' + pj + ' incorrectly';
+    }
+    return result;
+}
+
 // -------------
 
 // Where the logic begins:
