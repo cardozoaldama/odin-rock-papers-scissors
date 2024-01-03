@@ -129,7 +129,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-<<<<<<< HEAD
 
 # ---> VisualStudioCode
 .vscode/*
@@ -144,6 +143,3 @@ dist
 
 # Built Visual Studio Code Extensions
 *.vsix
-
-=======
->>>>>>> a9f37d0 (Initial commit)
