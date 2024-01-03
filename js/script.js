@@ -83,7 +83,7 @@ let computerSelection = '';
 // ASSIGN computerSelection called a function getComputerChoice().
 computerSelection = getComputerChoice();
 // ASK the user for "Rock, Paper, or Scissor?" and assign the value in playerSelection:
-playerSelection = prompt('Write one of these: Rock, Paper, or Scissors.');
+playerSelection = prompt('Write one of these: Rock, Paper, or Scissor.');
 // Convert playerSelection in all uppercase:
 playerSelection = playerSelection.toUpperCase();
 // PRINT a Function called playRound() with playerSelection and computerSelection Returning "result":
