@@ -1,15 +1,13 @@
 /* FUNCTIONS */
 
 // CREATE a Function called randomNumberBetween() with max and min and returns a result.
-function randomNumberBetween(max, min)
-{
+function randomNumberBetween(max, min) {
     // This operation is kind of precision.
     return Math.floor(Math.random() * (max - min + 1) + 1);
 }
 
 // CREATE a Function called getComputerChoice() with no parameters and returns a result.
-function getComputerChoice()
-{
+function getComputerChoice() {
     // SET result to 0.
     let result = 0;
     // Round to the floor the operation.
@@ -21,50 +19,41 @@ function getComputerChoice()
     */
     // Conditionals:
     // A rock:
-    if (result === 1)
-    {
+    if (result === 1) {
         return 'ROCK';
     }
     // A paper:
-    else if (result === 2)
-    {
+    else if (result === 2) {
         return 'PAPER';
     }
     // A scissor:
-    else
-    {
+    else {
         return 'SCISSOR';
     }
 }
 
 // CREATE a Function called playRound() with pj and cpu which Returns a result.
 // The parameters are the player's choice and computer's choice respectively.
-function playRound(pj, cpu)
-{
+function playRound(pj, cpu) {
     // SET result to 'empty text'.
     let result = '';
-    if (pj == cpu)
-    {
+    if (pj == cpu) {
         // Assign a draw in result.
-         result = 'It is a draw!';
+        result = 'It is a draw!';
     }
-    else if (pj == 'ROCK' && cpu == 'SCISSOR')
-    {
+    else if (pj == 'ROCK' && cpu == 'SCISSOR') {
         // Rock beats Scissors.
         result = 'You win! ' + pj + ' beats ' + cpu;
     }
-    else if (pj == 'PAPER' && cpu == 'ROCK')
-    {
+    else if (pj == 'PAPER' && cpu == 'ROCK') {
         // Paper beats Rock.
         result = 'You win! ' + pj + ' beats ' + cpu;
     }
-    else if (pj == 'SCISSOR' && cpu == 'PAPER')
-    {
+    else if (pj == 'SCISSOR' && cpu == 'PAPER') {
         // Scissors beats Paper.
         result = 'You win! ' + pj + ' beats ' + cpu;
     }
-    else
-    {
+    else {
         // If nothing was written correctly:
         result = 'You write ' + pj + ' incorrectly';
     }
@@ -79,8 +68,7 @@ console.log('ROCK, PAPERS, SCISSORS!');
 
 // MAIN FUNCTION GAME:
 
-function game()
-{
+function game() {
     // Main variables:
     // SET playerSelection to empty text.
     let playerSelection = '';
