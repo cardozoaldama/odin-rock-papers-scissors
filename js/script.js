@@ -86,7 +86,7 @@ function playGame() {
         return result;
     }
 
-    for(let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
         humanChoice = getHumanChoice();
         computerChoice = getComputerChoice();
         result = playRound(humanChoice, computerChoice);
@@ -104,3 +104,13 @@ let computerScore = 0;
 // Where the logic begins:
 console.log('ROCK, PAPERS, SCISSORS!');
 playGame();
+
+console.log('FINAL POINTS');
+console.log('Human score', humanScore);
+console.log('Computer score', computerScore);
+if (humanScore > computerScore) {
+    console.log('You win, human!');
+}
+else {
+    console.log('So bad... Computer wins!');
+}
