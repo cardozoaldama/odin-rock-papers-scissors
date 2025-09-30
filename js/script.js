@@ -37,8 +37,9 @@ function getHumanChoice() {
 }
 
 function playGame() {
-    let humanChoice = getHumanChoice();
-    let computerChoice = getComputerChoice();
+    let humanChoice;
+    let computerChoice;
+    let result;
     // CREATE a Function called playRound() with humanChoice and computerChoice which Returns a result.
     // The parameters are the player's choice and computer's choice respectively.
     function playRound(humanChoice, computerChoice) {
@@ -85,6 +86,12 @@ function playGame() {
         return result;
     }
 
+    for(let i = 0; i < 5; i++) {
+        humanChoice = getHumanChoice();
+        computerChoice = getComputerChoice();
+        result = playRound(humanChoice, computerChoice);
+        console.log(result);
+    }
 }
 
 
