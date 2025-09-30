@@ -1,11 +1,4 @@
 /* FUNCTIONS */
-
-const MAX = 3;
-const MIN = 1;
-
-let humanScore = 0;
-let computerScore = 0;
-
 // CREATE a Function called randomNumberBetween() with max and min and returns a result.
 function randomNumberBetween(max, min) {
     // This operation is kind of precision.
@@ -43,27 +36,6 @@ function getHumanChoice() {
     return playerSelection.toUpperCase();
 }
 
-// Where the logic begins:
-console.log('ROCK, PAPERS, SCISSORS!');
-
-// MAIN FUNCTION GAME:
-
-function game() {
-    // Main variables:
-    // SET playerSelection to empty text.
-    let playerSelection = '';
-    // SET computerSelection to empty text.
-    let computerSelection = '';
-    // ASSIGN computerSelection called a function getComputerChoice().
-    computerSelection = getComputerChoice();
-    // ASK the user for "Rock, Paper, or Scissor?" and assign the value in playerSelection:
-    playerSelection = prompt('Write one of these: Rock, Paper, or Scissor.');
-    // Convert playerSelection in all uppercase:
-    playerSelection = playerSelection.toUpperCase();
-    // PRINT a Function called playRound() with playerSelection and computerSelection Returning "result":
-    console.log(playRound(playerSelection, computerSelection));
-}
-
 function playGame() {
     let humanChoice = getHumanChoice();
     let computerChoice = getComputerChoice();
@@ -99,9 +71,12 @@ function playGame() {
     playRound(humanChoice, computerChoice);
 }
 
-// Gaming beats-of-five!
-game();
-game();
-game();
-game();
-game();
+
+const MAX = 3;
+const MIN = 1;
+
+let humanScore = 0;
+let computerScore = 0;
+
+// Where the logic begins:
+console.log('ROCK, PAPERS, SCISSORS!');
