@@ -14,7 +14,7 @@ function getComputerChoice() {
     // SET result to 0.
     let result = 0;
     // Round to the floor the operation.
-    result = randomNumberBetween(3, 1);
+    result = randomNumberBetween(MAX, MIN);
     /*
         Number 1: Rock.
         Number 2: Paper.
