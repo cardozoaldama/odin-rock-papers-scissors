@@ -3,6 +3,9 @@
 const MAX = 3;
 const MIN = 1;
 
+let humanScore = 0;
+let computerScore = 0;
+
 // CREATE a Function called randomNumberBetween() with max and min and returns a result.
 function randomNumberBetween(max, min) {
     // This operation is kind of precision.
