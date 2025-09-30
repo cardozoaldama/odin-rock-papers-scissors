@@ -43,30 +43,30 @@ function getHumanChoice() {
     return playerSelection.toUpperCase();
 }
 
-// CREATE a Function called playRound() with pj and cpu which Returns a result.
+// CREATE a Function called playRound() with humanChoice and computerChoice which Returns a result.
 // The parameters are the player's choice and computer's choice respectively.
-function playRound(pj, cpu) {
+function playRound(humanChoice, computerChoice) {
     // SET result to 'empty text'.
     let result = '';
-    if (pj == cpu) {
+    if (humanChoice == computerChoice) {
         // Assign a draw in result.
         result = 'It is a draw!';
     }
-    else if (pj == 'ROCK' && cpu == 'SCISSOR') {
+    else if (humanChoice == 'ROCK' && computerChoice == 'SCISSOR') {
         // Rock beats Scissors.
-        result = 'You win! ' + pj + ' beats ' + cpu;
+        result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
     }
-    else if (pj == 'PAPER' && cpu == 'ROCK') {
+    else if (humanChoice == 'PAPER' && computerChoice == 'ROCK') {
         // Paper beats Rock.
-        result = 'You win! ' + pj + ' beats ' + cpu;
+        result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
     }
-    else if (pj == 'SCISSOR' && cpu == 'PAPER') {
+    else if (humanChoice == 'SCISSOR' && computerChoice == 'PAPER') {
         // Scissors beats Paper.
-        result = 'You win! ' + pj + ' beats ' + cpu;
+        result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
     }
     else {
         // If nothing was written correctly:
-        result = 'You write ' + pj + ' incorrectly';
+        result = 'You write ' + humanChoice + ' incorrectly';
     }
     // Return the final result:
     return result;
