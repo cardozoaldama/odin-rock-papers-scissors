@@ -35,6 +35,11 @@ function getComputerChoice() {
     }
 }
 
+function getHumanChoice() {
+    playerSelection = prompt('Write one of these: Rock, Paper, or Scissor.');
+    return playerSelection.toUpperCase();
+}
+
 // CREATE a Function called playRound() with pj and cpu which Returns a result.
 // The parameters are the player's choice and computer's choice respectively.
 function playRound(pj, cpu) {
