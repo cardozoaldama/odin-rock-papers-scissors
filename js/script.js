@@ -65,6 +65,8 @@ function game() {
 }
 
 function playGame() {
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
     // CREATE a Function called playRound() with humanChoice and computerChoice which Returns a result.
     // The parameters are the player's choice and computer's choice respectively.
     function playRound(humanChoice, computerChoice) {
@@ -93,6 +95,8 @@ function playGame() {
         // Return the final result:
         return result;
     }
+
+    playRound(humanChoice, computerChoice);
 }
 
 // Gaming beats-of-five!
