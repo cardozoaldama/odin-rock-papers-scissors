@@ -51,14 +51,31 @@ function playGame() {
         else if (humanChoice == 'ROCK' && computerChoice == 'SCISSOR') {
             // Rock beats Scissors.
             result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
+            humanScore++;
+        }
+        else if (computerChoice == 'ROCK' && humanChoice == 'SCISSOR') {
+            result = 'You LOST! ' + computerChoice + ' beats ' + humanChoice;
+            computerScore++;
         }
         else if (humanChoice == 'PAPER' && computerChoice == 'ROCK') {
             // Paper beats Rock.
             result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
+            humanScore++;
+        }
+        else if (computerChoice == 'PAPER' && humanChoice == 'ROCK') {
+            // Paper beats Rock.
+            result = 'You LOST! ' + computerChoice + ' beats ' + humanChoice;
+            computerScore++;
         }
         else if (humanChoice == 'SCISSOR' && computerChoice == 'PAPER') {
             // Scissors beats Paper.
             result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
+            humanScore++;
+        }
+        else if (computerChoice == 'SCISSOR' && humanChoice == 'PAPER') {
+            // Scissors beats Paper.
+            result = 'You LOST! ' + computerChoice + ' beats ' + humanChoice;
+            computerScore++;
         }
         else {
             // If nothing was written correctly:
@@ -68,7 +85,6 @@ function playGame() {
         return result;
     }
 
-    playRound(humanChoice, computerChoice);
 }
 
 
@@ -80,3 +96,4 @@ let computerScore = 0;
 
 // Where the logic begins:
 console.log('ROCK, PAPERS, SCISSORS!');
+playGame();
