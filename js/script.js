@@ -43,37 +43,6 @@ function getHumanChoice() {
     return playerSelection.toUpperCase();
 }
 
-// CREATE a Function called playRound() with humanChoice and computerChoice which Returns a result.
-// The parameters are the player's choice and computer's choice respectively.
-function playRound(humanChoice, computerChoice) {
-    // SET result to 'empty text'.
-    let result = '';
-    if (humanChoice == computerChoice) {
-        // Assign a draw in result.
-        result = 'It is a draw!';
-    }
-    else if (humanChoice == 'ROCK' && computerChoice == 'SCISSOR') {
-        // Rock beats Scissors.
-        result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
-    }
-    else if (humanChoice == 'PAPER' && computerChoice == 'ROCK') {
-        // Paper beats Rock.
-        result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
-    }
-    else if (humanChoice == 'SCISSOR' && computerChoice == 'PAPER') {
-        // Scissors beats Paper.
-        result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
-    }
-    else {
-        // If nothing was written correctly:
-        result = 'You write ' + humanChoice + ' incorrectly';
-    }
-    // Return the final result:
-    return result;
-}
-
-// -------------
-
 // Where the logic begins:
 console.log('ROCK, PAPERS, SCISSORS!');
 
@@ -93,6 +62,37 @@ function game() {
     playerSelection = playerSelection.toUpperCase();
     // PRINT a Function called playRound() with playerSelection and computerSelection Returning "result":
     console.log(playRound(playerSelection, computerSelection));
+}
+
+function playGame() {
+    // CREATE a Function called playRound() with humanChoice and computerChoice which Returns a result.
+    // The parameters are the player's choice and computer's choice respectively.
+    function playRound(humanChoice, computerChoice) {
+        // SET result to 'empty text'.
+        let result = '';
+        if (humanChoice == computerChoice) {
+            // Assign a draw in result.
+            result = 'It is a draw!';
+        }
+        else if (humanChoice == 'ROCK' && computerChoice == 'SCISSOR') {
+            // Rock beats Scissors.
+            result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
+        }
+        else if (humanChoice == 'PAPER' && computerChoice == 'ROCK') {
+            // Paper beats Rock.
+            result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
+        }
+        else if (humanChoice == 'SCISSOR' && computerChoice == 'PAPER') {
+            // Scissors beats Paper.
+            result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
+        }
+        else {
+            // If nothing was written correctly:
+            result = 'You write ' + humanChoice + ' incorrectly';
+        }
+        // Return the final result:
+        return result;
+    }
 }
 
 // Gaming beats-of-five!
