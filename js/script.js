@@ -1,97 +1,97 @@
 /* FUNCTIONS */
 // CREATE a Function called randomNumberBetween() with max and min and returns a result.
 function randomNumberBetween(max, min) {
-    // This operation is kind of precision.
-    return Math.floor(Math.random() * (max - min + 1) + 1);
+  // This operation is kind of precision.
+  return Math.floor(Math.random() * (max - min + 1) + 1);
 }
 
 // CREATE a Function called getComputerChoice() with no parameters and returns a result.
 function getComputerChoice() {
-    // SET result to 0.
-    let result = 0;
-    // Round to the floor the operation.
-    result = randomNumberBetween(MAX, MIN);
-    /*
-        Number 1: Rock.
-        Number 2: Paper.
-        Number 3: Scissor.
-    */
-    // Conditionals:
-    // A rock:
-    if (result === 1) {
-        return 'ROCK';
-    }
-    // A paper:
-    else if (result === 2) {
-        return 'PAPER';
-    }
-    // A scissor:
-    else {
-        return 'SCISSOR';
-    }
+  // SET result to 0.
+  let result = 0;
+  // Round to the floor the operation.
+  result = randomNumberBetween(MAX, MIN);
+  /*
+      Number 1: Rock.
+      Number 2: Paper.
+      Number 3: Scissor.
+  */
+  // Conditionals:
+  // A rock:
+  if (result === 1) {
+    return 'ROCK';
+  }
+  // A paper:
+  else if (result === 2) {
+    return 'PAPER';
+  }
+  // A scissor:
+  else {
+    return 'SCISSOR';
+  }
 }
 
 function getHumanChoice() {
-    playerSelection = prompt('Write one of these: Rock, Paper, or Scissor.');
-    return playerSelection.toUpperCase();
+  playerSelection = prompt('Write one of these: Rock, Paper, or Scissor.');
+  return playerSelection.toUpperCase();
 }
 
 function playGame() {
-    let humanChoice;
-    let computerChoice;
-    let result;
-    // CREATE a Function called playRound() with humanChoice and computerChoice which Returns a result.
-    // The parameters are the player's choice and computer's choice respectively.
-    function playRound(humanChoice, computerChoice) {
-        // SET result to 'empty text'.
-        let result = '';
-        if (humanChoice == computerChoice) {
-            // Assign a draw in result.
-            result = 'It is a draw!';
-        }
-        else if (humanChoice == 'ROCK' && computerChoice == 'SCISSOR') {
-            // Rock beats Scissors.
-            result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
-            humanScore++;
-        }
-        else if (computerChoice == 'ROCK' && humanChoice == 'SCISSOR') {
-            result = 'You LOST! ' + computerChoice + ' beats ' + humanChoice;
-            computerScore++;
-        }
-        else if (humanChoice == 'PAPER' && computerChoice == 'ROCK') {
-            // Paper beats Rock.
-            result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
-            humanScore++;
-        }
-        else if (computerChoice == 'PAPER' && humanChoice == 'ROCK') {
-            // Paper beats Rock.
-            result = 'You LOST! ' + computerChoice + ' beats ' + humanChoice;
-            computerScore++;
-        }
-        else if (humanChoice == 'SCISSOR' && computerChoice == 'PAPER') {
-            // Scissors beats Paper.
-            result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
-            humanScore++;
-        }
-        else if (computerChoice == 'SCISSOR' && humanChoice == 'PAPER') {
-            // Scissors beats Paper.
-            result = 'You LOST! ' + computerChoice + ' beats ' + humanChoice;
-            computerScore++;
-        }
-        else {
-            // If nothing was written correctly:
-            result = 'You write ' + humanChoice + ' incorrectly';
-        }
-        // Return the final result:
-        return result;
+  let humanChoice;
+  let computerChoice;
+  let result;
+  // CREATE a Function called playRound() with humanChoice and computerChoice which Returns a result.
+  // The parameters are the player's choice and computer's choice respectively.
+  function playRound(humanChoice, computerChoice) {
+    // SET result to 'empty text'.
+    let result = '';
+    if (humanChoice == computerChoice) {
+      // Assign a draw in result.
+      result = 'It is a draw!';
     }
+    else if (humanChoice == 'ROCK' && computerChoice == 'SCISSOR') {
+      // Rock beats Scissors.
+      result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
+      humanScore++;
+    }
+    else if (computerChoice == 'ROCK' && humanChoice == 'SCISSOR') {
+      result = 'You LOST! ' + computerChoice + ' beats ' + humanChoice;
+      computerScore++;
+    }
+    else if (humanChoice == 'PAPER' && computerChoice == 'ROCK') {
+      // Paper beats Rock.
+      result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
+      humanScore++;
+    }
+    else if (computerChoice == 'PAPER' && humanChoice == 'ROCK') {
+      // Paper beats Rock.
+      result = 'You LOST! ' + computerChoice + ' beats ' + humanChoice;
+      computerScore++;
+    }
+    else if (humanChoice == 'SCISSOR' && computerChoice == 'PAPER') {
+      // Scissors beats Paper.
+      result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
+      humanScore++;
+    }
+    else if (computerChoice == 'SCISSOR' && humanChoice == 'PAPER') {
+      // Scissors beats Paper.
+      result = 'You LOST! ' + computerChoice + ' beats ' + humanChoice;
+      computerScore++;
+    }
+    else {
+      // If nothing was written correctly:
+      result = 'You write ' + humanChoice + ' incorrectly';
+    }
+    // Return the final result:
+    return result;
+  }
 
-    for (let i = 0; i < 5; i++) {
-        humanChoice = getHumanChoice();
-        computerChoice = getComputerChoice();
-        result = playRound(humanChoice, computerChoice);
-        console.log(result);
-    }
+  for (let i = 0; i < 5; i++) {
+    humanChoice = getHumanChoice();
+    computerChoice = getComputerChoice();
+    result = playRound(humanChoice, computerChoice);
+    console.log(result);
+  }
 }
 
 
@@ -109,8 +109,8 @@ console.log('FINAL POINTS');
 console.log('Human score', humanScore);
 console.log('Computer score', computerScore);
 if (humanScore > computerScore) {
-    console.log('You win, human!');
+  console.log('You win, human!');
 }
 else {
-    console.log('So bad... Computer wins!');
+  console.log('So bad... Computer wins!');
 }
