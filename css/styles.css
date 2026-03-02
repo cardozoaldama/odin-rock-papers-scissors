@@ -38,9 +38,11 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 90px;
   gap: 5px;
   text-align: center;
   padding: 5px;
+  width: 90px;
 }
 
 .container__title,
