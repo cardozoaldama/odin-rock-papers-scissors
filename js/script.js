@@ -79,3 +79,5 @@ const MIN = 1;
 
 let humanScore = 0;
 let computerScore = 0;
+
+const rpsButton = document.querySelectorAll(".rps-button");
