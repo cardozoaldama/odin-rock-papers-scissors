@@ -31,3 +31,14 @@ body {
   justify-content: space-between;
   padding: 25px;
 }
+
+.rock-button,
+.paper-button,
+.scissor-button {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+  padding: 5px;
+}
