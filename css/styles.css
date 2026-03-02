@@ -79,3 +79,7 @@ body {
 .response-cpu__text {
   font-size: 1.6rem;
 }
+
+.response-cpu:hover {
+  cursor: not-allowed;
+}
