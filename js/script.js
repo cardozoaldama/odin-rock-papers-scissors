@@ -19,7 +19,7 @@ function getComputerChoice() {
 const MAX = 3;
 const MIN = 1;
 
-let humanScore = 0;
-let computerScore = 0;
+const humanScore = document.querySelector("#human-score");
+const computerScore = document.querySelector("#computer-score");
 
 const rpsButton = document.querySelectorAll(".rps-button");
