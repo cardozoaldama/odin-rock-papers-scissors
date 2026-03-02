@@ -1,7 +1,5 @@
 /* FUNCTIONS */
-// CREATE a Function called randomNumberBetween() with max and min and returns a result.
 function randomNumberBetween(max, min) {
-  // This operation is kind of precision.
   return Math.floor(Math.random() * (max - min + 1) + 1);
 }
 
@@ -86,12 +84,6 @@ function playGame() {
     return result;
   }
 
-  for (let i = 0; i < 5; i++) {
-    humanChoice = getHumanChoice();
-    computerChoice = getComputerChoice();
-    result = playRound(humanChoice, computerChoice);
-    console.log(result);
-  }
 }
 
 
