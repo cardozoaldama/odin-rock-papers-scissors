@@ -16,64 +16,6 @@ function getComputerChoice() {
   }
 }
 
-function getHumanChoice() {
-  playerSelection = prompt('Write one of these: Rock, Paper, or Scissor.');
-  return playerSelection.toUpperCase();
-}
-
-function playGame() {
-  let humanChoice;
-  let computerChoice;
-  let result;
-  // CREATE a Function called playRound() with humanChoice and computerChoice which Returns a result.
-  // The parameters are the player's choice and computer's choice respectively.
-  function playRound(humanChoice, computerChoice) {
-    // SET result to 'empty text'.
-    let result = '';
-    if (humanChoice == computerChoice) {
-      // Assign a draw in result.
-      result = 'It is a draw!';
-    }
-    else if (humanChoice == 'ROCK' && computerChoice == 'SCISSOR') {
-      // Rock beats Scissors.
-      result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
-      humanScore++;
-    }
-    else if (computerChoice == 'ROCK' && humanChoice == 'SCISSOR') {
-      result = 'You LOST! ' + computerChoice + ' beats ' + humanChoice;
-      computerScore++;
-    }
-    else if (humanChoice == 'PAPER' && computerChoice == 'ROCK') {
-      // Paper beats Rock.
-      result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
-      humanScore++;
-    }
-    else if (computerChoice == 'PAPER' && humanChoice == 'ROCK') {
-      // Paper beats Rock.
-      result = 'You LOST! ' + computerChoice + ' beats ' + humanChoice;
-      computerScore++;
-    }
-    else if (humanChoice == 'SCISSOR' && computerChoice == 'PAPER') {
-      // Scissors beats Paper.
-      result = 'You win! ' + humanChoice + ' beats ' + computerChoice;
-      humanScore++;
-    }
-    else if (computerChoice == 'SCISSOR' && humanChoice == 'PAPER') {
-      // Scissors beats Paper.
-      result = 'You LOST! ' + computerChoice + ' beats ' + humanChoice;
-      computerScore++;
-    }
-    else {
-      // If nothing was written correctly:
-      result = 'You write ' + humanChoice + ' incorrectly';
-    }
-    // Return the final result:
-    return result;
-  }
-
-}
-
-
 const MAX = 3;
 const MIN = 1;
 
