@@ -1,60 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rock Papers Scissors! The Odin Project</title>
+        <!-- STYLES -->
+        <!-- Icons: Favicon -->
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Papers Scissors! The Odin Project</title>
-  <!-- STYLES -->
-  <!-- Icons: Favicon -->
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./css/styles.css">
-</head>
+    <body>
+        <main class="container">
+            <h1 class="container__title">Rock Papers Scissors!</h1>
+            <p class="container__desc">What is your choice, Player?</p>
 
-<body>
-  <main class="container">
-    <h1 class="container__title">Rock Papers Scissors!</h1>
-    <p class="container__desc">What is your choice, Player?</p>
+            <section class="options-container">
+                <div class="rock-button rps-button">
+                    <img
+                        src="./img/landslide-icon.svg"
+                        alt="SVG mountain icon. It is not a rock, actually"
+                        class="rock-button__image button__image"
+                    />
+                    <p class="rock-button__text">ROCK</p>
+                </div>
 
-    <section class="options-container">
-      <div class="rock-button rps-button">
-        <img src="./img/landslide-icon.svg" alt="SVG mountain icon. It is not a rock, actually"
-          class="rock-button__image button__image">
-        <p class="rock-button__text">ROCK</p>
-      </div>
+                <div class="paper-button rps-button">
+                    <img
+                        src="./img/text-file-icon.svg"
+                        alt="SVG text file icon, but should be a paper actually"
+                        class="paper-button__image button__image"
+                    />
+                    <p class="paper-button__text">PAPER</p>
+                </div>
 
-      <div class="paper-button rps-button">
-        <img src="./img/text-file-icon.svg" alt="SVG text file icon, but should be a paper actually"
-          class="paper-button__image button__image">
-        <p class="paper-button__text">PAPER</p>
-      </div>
+                <div class="scissor-button rps-button">
+                    <img
+                        src="./img/cut-scissor-icon.svg"
+                        alt="SVG cut scissor icon and actually it is"
+                        class="scissor-button__image button__image"
+                    />
+                    <p class="scissor-button__text">SCISSOR</p>
+                </div>
+            </section>
 
-      <div class="scissor-button rps-button">
-        <img src="./img/cut-scissor-icon.svg" alt="SVG cut scissor icon and actually it is"
-          class="scissor-button__image button__image">
-        <p class="scissor-button__text">SCISSOR</p>
-      </div>
+            <hr />
 
-    </section>
+            <section class="points">
+                <p class="points__desc">
+                    Player <span id="human-score">0</span> &hyphen;
+                    <span id="computer-score">0</span> Computer
+                </p>
+            </section>
 
-    <hr>
+            <hr />
 
-    <section class="points">
-      <p class="points__desc">Player <span id="player-points">0</span> &hyphen; <span id="computer-points">0</span>
-        Computer</p>
-    </section>
+            <div class="result-message">Waiting for you... Player...</div>
 
-    <hr>
-
-    <div class="result-message">Waiting for you... Player...</div>
-
-    <div class="response-cpu">
-      <img src="./img/question-wait.svg" alt="SVG of an question marker to wait the player" class="response-cpu__img">
-      <p class="response-cpu__text">?</p>
-    </div>
-
-  </main> <!-- SCRIPT -->
-  <script src="./js/script.js"></script>
-</body>
-
+            <div class="response-cpu">
+                <img
+                    src="./img/question-wait.svg"
+                    alt="SVG of an question marker to wait the player"
+                    class="response-cpu__img"
+                />
+                <p class="response-cpu__text">?</p>
+            </div>
+        </main>
+        <!-- SCRIPT -->
+        <script src="./js/script.js"></script>
+    </body>
 </html>
