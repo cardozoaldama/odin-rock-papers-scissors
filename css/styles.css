@@ -42,3 +42,18 @@ body {
   text-align: center;
   padding: 5px;
 }
+
+.container__title,
+.container__desc,
+.result-message {
+  text-align: center;
+}
+
+.container__title,
+.container__desc {
+  margin-bottom: 10px;
+}
+
+.result-message {
+  padding: 10px 5px;
+}
