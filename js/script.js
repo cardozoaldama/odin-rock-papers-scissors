@@ -79,17 +79,3 @@ const MIN = 1;
 
 let humanScore = 0;
 let computerScore = 0;
-
-// Where the logic begins:
-console.log('ROCK, PAPERS, SCISSORS!');
-playGame();
-
-console.log('FINAL POINTS');
-console.log('Human score', humanScore);
-console.log('Computer score', computerScore);
-if (humanScore > computerScore) {
-  console.log('You win, human!');
-}
-else {
-  console.log('So bad... Computer wins!');
-}
