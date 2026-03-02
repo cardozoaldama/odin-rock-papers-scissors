@@ -5,27 +5,14 @@ function randomNumberBetween(max, min) {
 
 // CREATE a Function called getComputerChoice() with no parameters and returns a result.
 function getComputerChoice() {
-  // SET result to 0.
-  let result = 0;
-  // Round to the floor the operation.
-  result = randomNumberBetween(MAX, MIN);
-  /*
-      Number 1: Rock.
-      Number 2: Paper.
-      Number 3: Scissor.
-  */
-  // Conditionals:
-  // A rock:
-  if (result === 1) {
-    return 'ROCK';
-  }
-  // A paper:
-  else if (result === 2) {
-    return 'PAPER';
-  }
-  // A scissor:
-  else {
-    return 'SCISSOR';
+  let result = randomNumberBetween(MAX, MIN);
+  switch (result) {
+    case 1:
+      return "ROCK";
+    case 2:
+      return "PAPER";
+    case 3:
+      return "SCISSOR";
   }
 }
 
