@@ -57,3 +57,9 @@ body {
 .result-message {
   padding: 10px 5px;
 }
+
+.points {
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 25px;
+}
