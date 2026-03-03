@@ -23,6 +23,26 @@ function validatePlayerWinner() {
   return humanScore > 5 ? playerWinsText : cpuWinsText;
 }
 
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice == "ROCK" && computerChoice == "SCISSOR") {
+    humanScore++;
+  } else if (computerChoice == "ROCK" && humanChoice == "SCISSOR") {
+    computerScore++;
+  } else if (humanChoice == "PAPER" && computerChoice == "ROCK") {
+    humanScore++;
+  } else if (computerChoice == "PAPER" && humanChoice == "ROCK") {
+    computerScore++;
+  } else if (humanChoice == "SCISSOR" && computerChoice == "PAPER") {
+    humanScore++;
+  } else if (computerChoice == "SCISSOR" && humanChoice == "PAPER") {
+    computerScore++;
+  } else {
+    console.log("It is just a draw...");
+  }
+  humanScoreSpan.textContent = humanScore;
+  computerScoreSpan.textContent = computerScore;
+}
+
 const MAX = 3;
 const MIN = 1;
 
