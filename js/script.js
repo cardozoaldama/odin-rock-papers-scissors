@@ -22,4 +22,7 @@ const MIN = 1;
 const humanScoreSpan = document.querySelector("#human-score");
 const computerScoreSpan = document.querySelector("#computer-score");
 
+let humanScore = parseInt(humanScoreSpan.textContent);
+let computerScore = parseInt(computerScoreSpan.textContent);
+
 const rpsButton = document.querySelectorAll(".rps-button");
