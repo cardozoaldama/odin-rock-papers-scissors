@@ -16,6 +16,13 @@ function getComputerChoice() {
   }
 }
 
+function validatePlayerWinner() {
+  let playerWinsText = "The player beats the computer!";
+  let cpuWinsText = "The computer beats you hardly!";
+
+  return humanScore > 5 ? playerWinsText : cpuWinsText;
+}
+
 const MAX = 3;
 const MIN = 1;
 
