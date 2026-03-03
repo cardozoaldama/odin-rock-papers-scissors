@@ -53,3 +53,7 @@ let humanScore = parseInt(humanScoreSpan.textContent);
 let computerScore = parseInt(computerScoreSpan.textContent);
 
 const rpsButton = document.querySelectorAll(".rps-button");
+
+const rpsRockText = document.querySelector(".rock-button__text");
+const rpsPaperText = document.querySelector(".paper-button__text");
+const rpsScissorText = document.querySelector(".paper-button__text");
