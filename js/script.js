@@ -46,8 +46,8 @@ function playRound(humanChoice, computerChoice) {
 const MAX = 3;
 const MIN = 1;
 
-const humanScoreSpan = document.querySelector("#human-score");
-const computerScoreSpan = document.querySelector("#computer-score");
+const humanScoreSpan = document.getElementById("human-score");
+const computerScoreSpan = document.getElementById("computer-score");
 
 let humanScore = parseInt(humanScoreSpan.textContent);
 let computerScore = parseInt(computerScoreSpan.textContent);
