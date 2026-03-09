@@ -57,3 +57,15 @@ const rpsButton = document.querySelectorAll(".rps-button");
 const rpsRockText = document.querySelector(".rock-button__text").textContent;
 const rpsPaperText = document.querySelector(".paper-button__text").textContent;
 const rpsScissorText = document.querySelector(".paper-button__text").textContent;
+
+rpsButton.item(0).addEventListener("click", () => {
+  playRound(rpsRockText, getComputerChoice());
+});
+
+rpsButton.item(1).addEventListener("click", () => {
+  playRound(rpsPaperText, getComputerChoice());
+});
+
+rpsButton.item(2).addEventListener("click", () => {
+  playRound(rpsScissorText, getComputerChoice());
+});
