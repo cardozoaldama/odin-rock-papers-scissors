@@ -49,6 +49,8 @@ function playRound(humanChoice, computerChoice) {
 const MAX = 3;
 const MIN = 1;
 
+const MAX_ROUNDS = 5;
+
 const ROCK_TXT = "ROCK";
 const PAPER_TXT = "PAPER";
 const SCISSOR_TXT = "SCISSOR";
