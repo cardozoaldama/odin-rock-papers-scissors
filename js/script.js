@@ -10,13 +10,13 @@ function getComputerChoice() {
 
   switch (result) {
     case 1:
-      textResult = "ROCK";
+      textResult = ROCK_TXT;
       break;
     case 2:
-      textResult = "PAPER";
+      textResult = PAPER_TXT;
       break;
     case 3:
-      textResult = "SCISSOR";
+      textResult = SCISSOR_TXT;
       break;
   }
 
@@ -32,17 +32,17 @@ function validatePlayerWinner() {
 }
 
 function playRound(humanChoice, computerChoice) {
-  if (humanChoice === "ROCK" && computerChoice === "SCISSOR") {
+  if (humanChoice === ROCK_TXT && computerChoice === SCISSOR_TXT) {
     humanScore++;
-  } else if (computerChoice === "ROCK" && humanChoice === "SCISSOR") {
+  } else if (computerChoice === ROCK_TXT && humanChoice === SCISSOR_TXT) {
     computerScore++;
-  } else if (humanChoice === "PAPER" && computerChoice === "ROCK") {
+  } else if (humanChoice === PAPER_TXT && computerChoice === ROCK_TXT) {
     humanScore++;
-  } else if (computerChoice === "PAPER" && humanChoice === "ROCK") {
+  } else if (computerChoice === PAPER_TXT && humanChoice === ROCK_TXT) {
     computerScore++;
-  } else if (humanChoice === "SCISSOR" && computerChoice === "PAPER") {
+  } else if (humanChoice === SCISSOR_TXT && computerChoice === PAPER_TXT) {
     humanScore++;
-  } else if (computerChoice === "SCISSOR" && humanChoice === "PAPER") {
+  } else if (computerChoice === SCISSOR_TXT && humanChoice === PAPER_TXT) {
     computerScore++;
   } else {
     console.log("It is just a draw...");
@@ -54,6 +54,10 @@ function playRound(humanChoice, computerChoice) {
 const MAX = 3;
 const MIN = 1;
 
+const ROCK_TXT = "ROCK";
+const PAPER_TXT = "PAPER";
+const SCISSOR_TXT = "SCISSOR";
+
 const humanScoreSpan = document.getElementById("human-score");
 const computerScoreSpan = document.getElementById("computer-score");
 
@@ -62,20 +66,16 @@ let computerScore = parseInt(computerScoreSpan.textContent);
 
 const rpsButton = document.querySelectorAll(".rps-button");
 
-const rpsRockText = document.querySelector(".rock-button__text").textContent;
-const rpsPaperText = document.querySelector(".paper-button__text").textContent;
-const rpsScissorText = document.querySelector(".paper-button__text").textContent;
-
 const computerResultMessage = document.getElementById("result-message");
 
 rpsButton.item(0).addEventListener("click", () => {
-  playRound(rpsRockText, getComputerChoice());
+  playRound(ROCK_TXT, getComputerChoice());
 });
 
 rpsButton.item(1).addEventListener("click", () => {
-  playRound(rpsPaperText, getComputerChoice());
+  playRound(PAPER_TXT, getComputerChoice());
 });
 
 rpsButton.item(2).addEventListener("click", () => {
-  playRound(rpsScissorText, getComputerChoice());
+  playRound(SCISSOR_TXT, getComputerChoice());
 });
