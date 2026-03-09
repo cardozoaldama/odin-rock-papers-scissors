@@ -6,14 +6,22 @@ function randomNumberBetween(max, min) {
 // CREATE a Function called getComputerChoice() with no parameters and returns a result.
 function getComputerChoice() {
   let result = randomNumberBetween(MAX, MIN);
+  let textResult = "";
+
   switch (result) {
     case 1:
-      return "ROCK";
+      textResult = "ROCK";
+      break;
     case 2:
-      return "PAPER";
+      textResult = "PAPER";
+      break;
     case 3:
-      return "SCISSOR";
+      textResult = "SCISSOR";
+      break;
   }
+
+  computerResultMessage.textContent = "I have choose " + textResult + "!";
+  return textResult;
 }
 
 function validatePlayerWinner() {
@@ -57,6 +65,8 @@ const rpsButton = document.querySelectorAll(".rps-button");
 const rpsRockText = document.querySelector(".rock-button__text").textContent;
 const rpsPaperText = document.querySelector(".paper-button__text").textContent;
 const rpsScissorText = document.querySelector(".paper-button__text").textContent;
+
+const computerResultMessage = document.getElementById("result-message");
 
 rpsButton.item(0).addEventListener("click", () => {
   playRound(rpsRockText, getComputerChoice());
