@@ -46,6 +46,11 @@ function playRound(humanChoice, computerChoice) {
   computerScoreSpan.textContent = computerScore;
 }
 
+function resetGame() {
+  humanScore = 0;
+  computerScore = 0;
+}
+
 const MAX = 3;
 const MIN = 1;
 
