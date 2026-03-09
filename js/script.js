@@ -24,17 +24,17 @@ function validatePlayerWinner() {
 }
 
 function playRound(humanChoice, computerChoice) {
-  if (humanChoice == "ROCK" && computerChoice == "SCISSOR") {
+  if (humanChoice === "ROCK" && computerChoice === "SCISSOR") {
     humanScore++;
-  } else if (computerChoice == "ROCK" && humanChoice == "SCISSOR") {
+  } else if (computerChoice === "ROCK" && humanChoice === "SCISSOR") {
     computerScore++;
-  } else if (humanChoice == "PAPER" && computerChoice == "ROCK") {
+  } else if (humanChoice === "PAPER" && computerChoice === "ROCK") {
     humanScore++;
-  } else if (computerChoice == "PAPER" && humanChoice == "ROCK") {
+  } else if (computerChoice === "PAPER" && humanChoice === "ROCK") {
     computerScore++;
-  } else if (humanChoice == "SCISSOR" && computerChoice == "PAPER") {
+  } else if (humanChoice === "SCISSOR" && computerChoice === "PAPER") {
     humanScore++;
-  } else if (computerChoice == "SCISSOR" && humanChoice == "PAPER") {
+  } else if (computerChoice === "SCISSOR" && humanChoice === "PAPER") {
     computerScore++;
   } else {
     console.log("It is just a draw...");
