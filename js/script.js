@@ -24,14 +24,8 @@ function getComputerChoice() {
   return textResult;
 }
 
-function validatePlayerWinner() {
-  let playerWinsText = "The player beats the computer!";
-  let cpuWinsText = "The computer beats you hardly!";
-
-  return humanScore >= 5 ? playerWinsText : cpuWinsText;
-}
-
 function playRound(humanChoice, computerChoice) {
+
   if (humanChoice === ROCK_TXT && computerChoice === SCISSOR_TXT) {
     humanScore++;
   } else if (computerChoice === ROCK_TXT && humanChoice === SCISSOR_TXT) {
@@ -47,6 +41,7 @@ function playRound(humanChoice, computerChoice) {
   } else {
     computerResultMessage.textContent = "It is just a draw...";
   }
+
   humanScoreSpan.textContent = humanScore;
   computerScoreSpan.textContent = computerScore;
 }
@@ -57,6 +52,9 @@ const MIN = 1;
 const ROCK_TXT = "ROCK";
 const PAPER_TXT = "PAPER";
 const SCISSOR_TXT = "SCISSOR";
+
+const PLAYER_WINS_TXT = "The player beats the computer!";
+const CPU_WINS_TXT = "The computer beats you hardly!";
 
 const humanScoreSpan = document.getElementById("human-score");
 const computerScoreSpan = document.getElementById("computer-score");
