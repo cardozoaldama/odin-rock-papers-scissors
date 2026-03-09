@@ -45,7 +45,7 @@ function playRound(humanChoice, computerChoice) {
   } else if (computerChoice === SCISSOR_TXT && humanChoice === PAPER_TXT) {
     computerScore++;
   } else {
-    console.log("It is just a draw...");
+    computerResultMessage.textContent = "It is just a draw...";
   }
   humanScoreSpan.textContent = humanScore;
   computerScoreSpan.textContent = computerScore;
