@@ -46,7 +46,7 @@ body {
 
 .container__title,
 .container__desc,
-.result-message {
+#result-message {
   text-align: center;
 }
 
@@ -55,7 +55,7 @@ body {
   margin-bottom: 10px;
 }
 
-.result-message {
+#result-message {
   padding: 10px 5px;
 }
 
@@ -69,17 +69,17 @@ body {
   cursor: pointer;
 }
 
-.response-cpu {
+#response-cpu {
   height: 100px;
   margin: 20px auto;
   text-align: center;
   width: 100px
 }
 
-.response-cpu__text {
+#response-cpu__text {
   font-size: 1.6rem;
 }
 
-.response-cpu:hover {
+#response-cpu:hover {
   cursor: not-allowed;
 }
